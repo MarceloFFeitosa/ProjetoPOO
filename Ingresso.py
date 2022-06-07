@@ -1,24 +1,23 @@
-from Filme import Filme
-from Cliente import Cliente
+class Ingresso:
+    def __init__(self, nome, sessao, id):
+        self.nome = nome
+        self.sessao = sessao
+        self.id = id
 
-class Ingresso(Filme, Cliente):
-    def __init__(self, nome, sessão, id, codigo, tipo):
-        super().__init__(nome, id)
-        self.__sessao = sessão
-        self.__codigo = codigo
-        self.__tipo = tipo
+    def get_nome(self):
+        return self.nome
 
+    def set_nome(self, nome):
+        self.nome = nome
 
-    def get_codigo(self):
-        return self.__codigo
+    def get_sessao(self):
+        return self.sessao
 
-    def set_codigo(self, codigo):
-        self.__codigo = codigo
+    def set_sessao(self, sessao):
+        self.sessao = sessao
 
-    def get_tipo(self):
-        return self.__tipo
+    def get_id(self):
+        return self.id
 
-    def set_tipo(self, tipo):
-        self.__tipo = tipo
-
-
+    def set_id(self, id):
+        self.id = id
